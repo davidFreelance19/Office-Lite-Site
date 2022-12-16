@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: v.$neutral-400;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.d-grid{
+    display: grid;
+}
+.m-auto{
+    margin: 0 auto;
+}
+.header, .header__container, .main__card--blue, .footer{
+    position: relative;
+}
+.footer__timing{
+    gap: 1;
+}
+@include m.tablet {
+    .footer__timing{
+        gap: 2rem;
+    }
+    .header, .footer__container{
+        display: flex;
+    }
+    .header__logo, .btn{
+        margin: 0;
+     }
+     .footer__today, .footer__timing, .card__info .btn, .main__beneficios .btn{
+        margin: 0 auto;
+    }
+}
+.footer__reloj, .main, .header__info, .header__container{
+    gap: 2rem;
+}
+.header__container, .main, .footer__container{
+    width: min(1100px, 90%);
+}
+.header__image, .header__info, .card__info, .main__beneficios, .footer, .footer__timing p, .footer__timing{
+    display: flex;
+}
+.footer img, .main__bg, .header__pattern{
+    position: absolute;
+}
+.header__image, .header__info, .footer__timing p{
+    justify-content: center;
+}
+.header__logo, .footer__btn{
+    align-self: center;
+}
+.main__card--blue, .footer{
+    overflow: hidden;
+}
+.header__info, .card__info, .main__beneficios, .footer__timing p{
+    flex-direction: column;
+}
+.card__info, .main__beneficios{
+    justify-content: space-evenly;
+}
+.main__price, .main .btn{
+    font-weight: bold;
+}

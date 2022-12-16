@@ -1,0 +1,72 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+.footer{
+    background-color: v.$prymary-400;
+    z-index: -1;
+    padding: 2rem 0;
+}
+.footer__timing p{
+    color: v.$neutral-100;
+    background-color: v.$prymary-300;
+    font-weight: bold;
+    border-radius: 10px;
+    align-items: center;
+    gap: .5rem;
+}
+.footer__reloj{
+    width: 100%;
+}
+.footer__today p{
+    color: v.$prymary-100;
+}
+.footer__today span{
+    color: v.$neutral-100;
+}
+.footer__reloj{
+    margin-bottom: 3rem;
+}
+.footer img{
+    left: 0;
+    height: 35%;
+    width: 100%;
+    bottom: 0;
+}
+/*Tablet*/
+@media (min-width: 765px) {
+     .footer{
+        padding: 4rem 0;
+     }
+     .footer__container{
+        margin: 0 auto;
+        gap: 3rem;
+     }
+     .footer__btn{
+        text-align: center;
+     }
+    .footer__reloj{
+        margin-bottom: 0;
+    }
+    .footer img{
+        width: 100%;
+        height: unset;
+        top: 30%;
+    }
+}
+/* Desktop */
+@media (min-width: 1028px) {
+     .footer{
+        padding: 7rem 0;
+     }
+     .footer__reloj{
+        width: unset;
+     }
+     .footer__today{
+        margin: unset;
+     }
+     .footer img{
+        width: 1125px;
+        top: -25%;
+        left: -30%;
+        height: 1110px;
+     }
+}

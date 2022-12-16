@@ -1,0 +1,44 @@
+@use 'base/mixins' as m;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+.title, .main__card, .footer__today p, .footer__today span, .header__text, .btn{
+    text-align: center;
+}
+.title{
+    font-size: 37px;
+}
+.header__text{
+    font-size: 18px;
+}
+.footer__reloj span{
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer__today p, .footer__today span{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.main__subtitle{
+    font-size: 25px;
+}
+.main__price{
+    font-size: 50px;
+}
+@include m.tablet {
+    .title, .header__text{
+        text-align: unset;
+     }
+     .header__text{
+        width: 95%;
+     }
+}
+@include m.desktop {
+    .title{
+       width: 90%;
+       font-size: 52px;
+    }
+    .footer__today p, .footer__today span{
+        text-align: unset;
+        font-size: 25px;
+     }
+}

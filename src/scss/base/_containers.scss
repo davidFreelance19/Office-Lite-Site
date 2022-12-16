@@ -1,0 +1,132 @@
+@use 'base/mixins' as m;
+body{
+    height: 2940px;
+}
+@include m.tablet {
+    body{
+        height: 2075px;
+    }
+}
+@include m.desktop {
+    body {
+        height: 1775px;
+    }    
+}
+
+// Contenedores header
+.header{
+    height: 830px;
+}
+.header__container{
+    grid-template-rows:  90px auto;
+}
+.header__hero{
+    grid-template-rows: 240px 430px;
+}
+@include m.tablet {
+    .header{
+        height: 560px;
+    }
+    .header__container{
+        height: 520px;
+        grid-template-rows: auto 400px;
+    }
+    .header__hero{
+        grid-template-columns: 405px auto;
+        grid-template-rows: unset;
+     }
+}
+@include m.desktop {
+    .header{
+        height: 850px;
+    }
+    .header__container{
+        max-width: 1100px;
+        height: 750px;
+        grid-template-rows: auto 650px;
+     }
+     .header__hero{
+        grid-template-columns: 1fr 1fr;
+     }
+}
+// ------------------
+
+// Contenedores Main
+.main{
+    height: 1710px;
+    grid-template-rows: repeat(3,1fr);
+}
+.main__card{
+    grid-template-rows: 260px auto;
+}
+@include m.tablet {
+    .main{
+        height: 1040px;
+        margin-top: 6rem;
+     }
+     .main__card{
+        grid-template-rows: unset;
+        grid-template-columns: 1fr 1fr;
+     }
+}
+@include m.desktop { 
+    .main{
+        height: 535px;
+        max-width: 1100px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: unset;
+    }
+    .main__card{
+        grid-template-columns: unset;
+     }
+}
+// ------------------------
+
+// Contenedores Footer
+.footer{
+    top: -50rem;
+    height: 1200px;
+}
+.footer__timing p{
+    height: 100px;
+    width: 70px;
+    font-size: 30px;
+}
+.footer__container{
+    height: 305px;
+    align-self: flex-end;
+    z-index: 2;
+}
+@include m.tablet {
+    .footer{
+        height: 950px;
+        top: -34rem;
+    }
+    .footer__timing p{
+        font-size: 48px;
+        height: 120px;
+        width: 90px;
+    }
+    .footer__container{
+        height: 290px;
+        align-items: end;
+        flex-direction: column;
+    }
+}
+@include m.desktop {
+    .footer{
+        height: 650px;
+        top: -15rem; 
+    }
+    .footer__timing p{
+        width: 90px;
+        height: 130px;
+        font-size: 45px;
+     }
+     .footer__container{
+        height: 190px;
+        width: 1100px;
+        flex-direction: unset;
+        justify-content: space-between;
+     }
+}

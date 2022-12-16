@@ -1,0 +1,48 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+.header__hero img{
+    width: 65%;
+    height: 100%;
+}
+.header__pattern{
+    width: 100%;
+    height: 60%;
+    top: -35%;
+}
+.btn{
+    width: 180px;
+    padding: 1rem;
+    border-radius: 100px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: v.$prymary-100;
+    color: v.$neutral-100;
+    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.315);
+}
+@include m.tablet {
+    .header{
+        overflow-x: hidden;
+        align-items: center;
+     }
+     .header__pattern{
+        height: 130%;
+        right: -50%;
+     }
+     .header__image{
+        order: 1;
+     }
+     .header__image img{
+        width: 100%;
+     }
+}
+@include m.desktop {
+     .header__pattern{
+        height: 870px;
+        right: -20%;
+        width: 1000px;
+     }
+     .header__image{
+        height: 640px;
+     }
+}
